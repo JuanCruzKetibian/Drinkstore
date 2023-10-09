@@ -1,7 +1,9 @@
-const CartWidget = ({greeting}) => {
+import React from 'react'
+
+const CartWidget = () => {
     return(
         <>
-        <h1>{greeting}</h1>
+        <h1></h1>
         </>
     )
     
