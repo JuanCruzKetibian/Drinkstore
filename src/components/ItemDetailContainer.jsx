@@ -1,7 +1,8 @@
 import React from 'react'
 import ItemList from './ItemList'
+import ItemDetail from './ItemDetail'
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
  
    const productos = [
                 {id:1 , name:"Branca", precio: 2000, categoria: "Fernet", detalle:"descripcion branca"},
@@ -28,10 +29,10 @@ const ItemListContainer = () => {
 
     return(
         <>
-        <ItemList productos={productos}/>
+        <ItemDetail productos={productos}/>
         </>
     )
     
     }
     
-    export default ItemListContainer
+    export default ItemDetailContainer
