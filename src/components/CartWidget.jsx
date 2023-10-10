@@ -1,9 +1,10 @@
 import React from 'react'
+import Hooks from './hooks'
 
 const CartWidget = () => {
     return(
         <>
-        <h1></h1>
+        <h1>Cordoba, Argentina.</h1>
         </>
     )
     
