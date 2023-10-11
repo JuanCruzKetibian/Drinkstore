@@ -1,19 +1,32 @@
 import React from 'react'
-import Item from './Item'
+import { Center, Card, CardHeader, Heading, CardBody } from "@chakra-ui/react"
+import { useParams } from 'react-router-dom';
 
 const ItemDetail = ({ productos }) => {
     
-    console.log(productos)
+    const { id } = useParams();
+    
+    const filtroproducto = productos.filter((producto) => producto.id == id)
+
     return(
         <>
         {
-            productos.map((p)=>{
-                return(
-                    <Item
-                    name = {p.name}
-                    detalle = {p.detalle}
-                    />
-                )
+            filtroproducto.map((p)=>{
+                <Center>
+                    <Card>
+                        <CardHeader>
+                            <Heading>
+                            {p.name}
+                            </Heading>
+                        </CardHeader>
+                        <CardBody>
+                            <Text>
+                            {p.detalle}
+                            {p.categoria}
+                            </Text>
+                        </CardBody>
+                    </Card>
+                </Center>
             })
         }
 

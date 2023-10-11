@@ -1,8 +1,10 @@
 import React from 'react'
 import ItemList from './ItemList'
+import { useParams } from 'react-router-dom'
 
-const ItemListContainer = () => {
- 
+const ItemListContainer = ({}) => {
+    
+    const { categoria } = useParams()
    const productos = [
                 {id:1 , name:"Branca", precio: 2000, categoria: "Fernet", detalle:"descripcion branca"},
                 {id:2 , name:"1886", precio: 1500, categoria: "Fernet", detalle:"descripcion 1886"},
@@ -18,7 +20,7 @@ const ItemListContainer = () => {
         if (productos.length > 0){
             setTimeout(()=>{
                 resolve(productos)
-            }, 5000)
+            }, 10)
         
         }
         else{
@@ -26,9 +28,21 @@ const ItemListContainer = () => {
         }
     })
 
+    mostrarProductos
+    .then((resultado) =>{
+        
+    })
+    .catch((error) => {
+
+    })
+
+    const filtoproducto = productos.filter((producto) => producto.categoria === categoria)
+
     return(
+        
         <>
-        <ItemList productos={productos}/>
+        <ItemList productos={filtoproducto}/>
+        
         </>
     )
     

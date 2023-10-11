@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
-import ItemDetailContainer from './ItemDetailContainer';
-import ItemListContainer from './ItemListContainer';
+import ItemDetailContainer from './ItemDetailContainer'
+import ItemListContainer from './ItemListContainer'
 
 const Item = ({name, detalle}) => {
     return(
@@ -17,8 +17,10 @@ const Item = ({name, detalle}) => {
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
+      <Button>
+        <Link to={`/item/${id}`}>
         Agregar al carrito 
+        </Link>
       </Button>
     </ButtonGroup>
   </CardFooter>

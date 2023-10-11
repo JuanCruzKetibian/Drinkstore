@@ -4,7 +4,7 @@ import Hooks from './hooks'
 const CartWidget = () => {
     return(
         <>
-        <h1>Cordoba, Argentina.</h1>
+        <h1>Carrito</h1>
         </>
     )
     

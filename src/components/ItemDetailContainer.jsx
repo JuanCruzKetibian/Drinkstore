@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemList from './ItemList'
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -19,7 +18,7 @@ const ItemDetailContainer = () => {
         if (productos.length > 0){
             setTimeout(()=>{
                 resolve(productos)
-            }, 5000)
+            }, 10)
         
         }
         else{
@@ -27,9 +26,17 @@ const ItemDetailContainer = () => {
         }
     })
 
+    mostrarProductos
+    .then((resultado) => {
+
+    })
+    .catch((error) => {
+
+    })
+
     return(
         <>
-        <ItemDetail productos={productos}/>
+         <ItemDetail productos={productos}/>
         </>
     )
     
