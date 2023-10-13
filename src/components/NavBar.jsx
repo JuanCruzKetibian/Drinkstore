@@ -1,7 +1,6 @@
 import React from 'react'
 import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from "@chakra-ui/react"
 import CartWidget from './CartWidget'
-import Hooks from './hooks'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {

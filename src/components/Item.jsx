@@ -1,33 +1,29 @@
 import React from 'react'
-import { Card, CardBody, Image, Stack, Heading, Text, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
-import ItemDetailContainer from './ItemDetailContainer'
-import ItemListContainer from './ItemListContainer'
+import { Card, CardBody, Heading, Text, CardFooter, Button, CardHeader } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
-const Item = ({name, detalle}) => {
+const Item = ({ name, detalle, categoria, id }) => {
     return(
-        <Card maxW='sm'>
-  <CardBody>
-    <Image
-    />
-    <Stack mt='6' spacing='3'>
-      <Heading size='md'>{name}</Heading>
+  
+    <Card>
+      <CardHeader>
+        <Heading size='md'>
+          {name}
+        </Heading>
+      </CardHeader>
+      <CardBody>
       <Text>{detalle}</Text>
-    </Stack>
-  </CardBody>
-  <Divider />
-  <CardFooter>
-    <ButtonGroup spacing='2'>
-      <Button>
-        <Link to={`/item/${id}`}>
-        Agregar al carrito 
-        </Link>
-      </Button>
-    </ButtonGroup>
-  </CardFooter>
-</Card>
-    
-    )
-    
+      <Text>{categoria}</Text>
+      </CardBody>
+      <CardFooter>
+        <Button>
+          <Link to={`/item/${id}`}>
+        Detalle 
+          </Link>
+        </Button>
+      </CardFooter>
+    </Card>
+    )    
     }
     
 export default Item

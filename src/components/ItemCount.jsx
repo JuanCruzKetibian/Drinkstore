@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Hooks = () => {
+const ItemCount = () => {
   const [cantidad, setCantidad] = useState(0);
 
   const onAdd = () => {
@@ -21,12 +21,13 @@ const Hooks = () => {
 
   return (
     <div>
-      <p>{cantidad}</p>
-      <button onClick={handleSumar}>Sumar</button>
-      <button onClick={handleRestar}>Restar</button>
-      <button onClick={onAdd}>Agregar</button>
+      <p>{cantidad}</p> 
+      <button onClick={handleSumar}>Agregar</button>    
+      <button onClick={handleRestar}>Quitar</button>
+      <button onClick={onAdd}>Agregar al carrito</button>
     </div>
   )
 }
 
-export default Hooks
+
+export default ItemCount
