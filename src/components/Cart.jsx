@@ -1,9 +1,10 @@
 import React from 'react'
+import Form from './Form'
 
 const Cart = () => {
     return(
         <>
-        Bienvenido a tu carrito
+        <Form/>
         </>
     )
 }

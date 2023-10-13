@@ -14,8 +14,6 @@ const ItemDetailContainer = () => {
                 {id:8 , name:"Beefetear", precio: 5000, categoria: "Gin", detalle:"Beefeater es otro gin icónico con raíces en Londres. Ofrece un sabor más pronunciado de enebro y una complejidad de especias, lo que lo convierte en una elección favorita entre los amantes del gin. Es una opción popular para cócteles clásicos y contemporáneos.", stock:22},
                 {id:9 , name:"Portillo", precio: 2000, categoria: "Vino", detalle:" El Vino Portillo es un vino argentino que ofrece una amplia gama de variedades, desde Malbec hasta Cabernet Sauvignon. Es conocido por su calidad y sabor frutado, con matices de la región de Mendoza en Argentina. Es una opción versátil para maridar con diferentes comidas.", stock:9},
                 {id:10 , name:"Luigi Bosca", precio: 5000, categoria: "Vino", detalle:"Luigi Bosca es una bodega de renombre en Argentina, y sus vinos son altamente valorados. Ofrecen una selección de vinos de alta calidad, incluyendo Malbec y Cabernet Sauvignon. Estos vinos suelen ser elegantes, complejos y expresivos, perfectos para los amantes del vino.", stock:7}
-    
-    
             ]
 
     const mostrarProductos = new Promise ((resolve, reject)=>{
